@@ -1,11 +1,16 @@
 const grades = (gradeList) => {
-  const gradeArray = gradelist.split(", ");
+  const gradeArray = gradeList.split(", ");
   const validGrades = ["green", "amber", "red"];
-  const gradeCounts = []
+  const resultArray = []
   validGrades.forEach((grade) => {
-    gradeCounts.push(gradeArray.filter((current) => current === grade).length);
+    const count = gradeArray.filter((current) => current === grade).length;
+    // console.log(grade, count)
+    if (count > 0) {
+      resultArray.push(`${grade}:${count}`)
+    }
   })
-  console.log(`grades = ${gradeCounts}`)
+  // console.log(`resultArray = ${resultArray}`)
+  return resultArray.join("\n")
 }
 
 module.exports = grades;
