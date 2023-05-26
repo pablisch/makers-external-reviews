@@ -29,4 +29,14 @@ describe('spellCheck', () => {
     const phrase = "one two";
     expect(spellCheck(phrase)).toEqual("one two");
   });
+
+  test('returns an modified string where spelling is correct/incorrect for multiple words "one tow"', () => {
+    const phrase = "one tow";
+    expect(spellCheck(phrase)).toEqual("one ~tow~");
+  });
+
+  test('returns an unmodified string where spelling is correct for multiple words "one tow free"', () => {
+    const phrase = "one tow free";
+    expect(spellCheck(phrase)).toEqual("one ~tow~ ~free~");
+  });
 });
