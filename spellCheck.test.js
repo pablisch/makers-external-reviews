@@ -24,4 +24,9 @@ describe('spellCheck', () => {
     const phrase = "tow";
     expect(spellCheck(phrase)).toEqual("~tow~");
   });
+
+  test('returns an unmodified string where spelling is correct for multiple words "one two"', () => {
+    const phrase = "one two";
+    expect(spellCheck(phrase)).toEqual("one two");
+  });
 });
