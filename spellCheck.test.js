@@ -14,4 +14,14 @@ describe('spellCheck', () => {
     const phrase = "three";
     expect(spellCheck(phrase)).toEqual("three");
   });
+
+  test('returns an modified string where spelling is incorrect for "on"', () => {
+    const phrase = "on";
+    expect(spellCheck(phrase)).toEqual("~on~");
+  });
+
+  test('returns an modified string where spelling is incorrect for "tow"', () => {
+    const phrase = "tow";
+    expect(spellCheck(phrase)).toEqual("~tow~");
+  });
 });
