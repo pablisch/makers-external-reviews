@@ -5,7 +5,6 @@ class Results {
   }
 
   countResultsOfAGrade(grade) {
-
     return this.gradesArray.filter(item => item.toUpperCase() === grade.toUpperCase()).length
   }
 
