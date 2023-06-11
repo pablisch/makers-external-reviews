@@ -36,10 +36,40 @@ describe('filter function', () => {
     expect(filter(freqArray, min, max)).toEqual([1000])
   });
 
+  test('returns an unmodified array where all freqs are within range', () => {
+    const freqArray = [110, 500];
+    const min = 40;
+    const max = 1000;
+    expect(filter(freqArray, min, max)).toEqual([110, 500])
+  });
+
   test('raises an error when array is empty', () => {
     const freqArray = [];
     const min = 40;
     const max = 1000;
-    expect(filter(freqArray, min, max)).toThrow("no frequencies supplied")
+    expect(() => {
+      filter(freqArray, min, max)
+    }).toThrow("no frequencies supplied")
   });
+
+  test('raises an error when array item is not an integer', () => {
+    const freqArray = [10, "hello"];
+    const min = 40;
+    const max = 1000;
+    expect(() => {
+      filter(freqArray, min, max)
+    }).toThrow("Only integers are allowed")
+  });
+
+  test('raises an error input is not an array', () => {
+    const freqArray = 10;
+    const min = 40;
+    const max = 1000;
+    expect(() => {
+      filter(freqArray, min, max)
+    }).toThrow("Frequency input must be an array")
+  });
+
+
+  
 });
