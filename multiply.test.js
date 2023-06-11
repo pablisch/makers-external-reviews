@@ -1,7 +1,4 @@
-
-const multiply = require('./multiply');
-const divide = require('./divide');
-const subtract = require('./subtract');
+const { multiply, divide, subtract } = require('./operations.js');
 
 describe('multiply function', () => { 
   test('multiply 2 * 3 to equal 6', () => {
@@ -23,6 +20,7 @@ describe('subtract function', () => {
   });
 }
 );
+
 
 
 

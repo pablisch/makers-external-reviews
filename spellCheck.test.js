@@ -1,4 +1,5 @@
 const spellCheck = require('./spellCheck');
+
 describe('spellCheck', () => {
   test('returns an unmodified string where spelling is correct for "one"', () => {
     const phrase = "one";

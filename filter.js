@@ -15,8 +15,6 @@ const filter = (freqArray, min = 40, max = 1000) => {
       return freq
     }
   })
-  console.log(`freqArray = ${freqArray}`)
-  console.log(`outputArray = ${outputArray}`)
   return outputArray;
 }
 

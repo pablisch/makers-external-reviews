@@ -20,4 +20,8 @@ function divide(a, b) {
 // function to subtract two numbers
 function subtract(a, b) {
     return a - b;
-}   
+} 
+
+module.exports = { multiply, divide, subtract };
+
+
