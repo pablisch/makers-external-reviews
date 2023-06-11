@@ -2,6 +2,9 @@
 
 bundle.js
 
+# pws and keys
+config.js
+
 # compiled output
 /dist
 /tmp
